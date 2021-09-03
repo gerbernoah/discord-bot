@@ -9,7 +9,7 @@ public class CommandParser
     {
         String beheaded = raw.replaceFirst(Constants.prefix,"");
         String[] splitBeheaded = beheaded.split(" ");
-        String invoke = splitBeheaded[0];
+        String invoke = splitBeheaded[0].toLowerCase();
         String[] args = new String[splitBeheaded.length - 1];
         for (int i = 0; i < args.length; i++)
         {

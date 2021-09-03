@@ -31,7 +31,7 @@ public class CommandListener extends ListenerAdapter
 
     private void handleCommand(Command cmd)
     {
-        if(commands.containsKey(cmd.getInvoke().toLowerCase()))
+        if(commands.containsKey(cmd.getInvoke()))
         {
             boolean performed = commands.get(cmd.getInvoke()).called(cmd.getArgs(), cmd.getEvent());
             if (performed)
