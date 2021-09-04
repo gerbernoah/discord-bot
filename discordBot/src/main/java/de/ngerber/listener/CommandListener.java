@@ -23,7 +23,7 @@ public class CommandListener extends ListenerAdapter
     public void onMessageReceived(@NotNull MessageReceivedEvent event)
     {
         if(event.getMessage().getContentRaw().startsWith(Constants.prefix)
-                && event.getMessage().getAuthor().getId() != event.getJDA().getSelfUser().getId())
+                && !event.getMessage().getAuthor().getId().equals(event.getJDA().getSelfUser().getId()))
         {
             handleCommand(CommandParser.parse(event.getMessage().getContentRaw(), event));
         }

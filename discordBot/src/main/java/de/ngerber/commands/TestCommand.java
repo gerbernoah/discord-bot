@@ -13,7 +13,7 @@ public class TestCommand implements ICommand
     @Override
     public void action(String[] args, MessageReceivedEvent event)
     {
-        event.getTextChannel().sendMessage("Hey there").queue();
+        event.getChannel().sendMessage("Hey there").queue();
     }
 
     @Override
